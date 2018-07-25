@@ -1,9 +1,558 @@
-<!DOCTYPE html>
-<html lang="en-US">
+<!doctype html>
+<html lang="en">
 <head>
-<title>test</title>
+    <title>FFCMS - content management system and framework</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Mobland - Mobile App Landing Page Template">
+    <meta name="keywords" content="ffcms,cms,engine,website,php,build website,system,php core,framework,mysql,postgresql">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Owl carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <!-- highlight js -->
+    <link rel="stylesheet" href="css/hljs/default.css">
+    <link rel="stylesheet" href="css/hljs/tomorrow-night.css">
+    <!-- Main css -->
+    <link href="css/style.min.css" rel="stylesheet">
+    <!-- font awesome -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
 </head>
-<body>
-<h1>test github org</h1>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="25">
+    <div class="nav-menu fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-dark navbar-expand-lg">
+                        <a class="navbar-brand" href="#about">FFCMS</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
+                        <div class="collapse navbar-collapse" id="navbar">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item"> <a class="nav-link active" href="#about">ABOUT <span class="sr-only">(current)</span></a></li>
+                                <li class="nav-item"> <a class="nav-link" href="#features">FEATURES</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="#launch-way">DOWNLOAD</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="https://dev.ffcms.org">COMMUNITY</a></li>
+                                <li class="nav-item"> <a class="nav-link" href="https://github.com/phpffcms" target="_blank">GITHUB</a></li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        MORE
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#news">News</a>
+                                        <a class="dropdown-item" href="#contact">Contact</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="bg-gradient" id="about">
+        <div class="container mt-5">
+            <h1>FFCMS - Fast flexible system</h1>
+            <img src="images/fflogo.png" class="img-fluid" style="max-height: 450px;" />
+            <p class="tagline">FFCMS - fast flexible content management system: php 7.1+, mysql/pgsql, redis caching. MVC and composer inside. <a href="#" data-toggle="modal" data-target="#mitModal">MIT</a> open-source license.</p>
+        </div>
+        <div class="mt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-12">
+                        <h2 style="color: #ebedfa">Requirements</h2>
+                        <ul style="text-align: left;">
+                            <li>php-fpm + nginx or apache2 + modphp</li>
+                            <li>PHP 7.1 or newest</li>
+                            <li>mysql 5.5 / postgres 9.2 or newest</li>
+                            <li>php_pdo, php_gd2, php_curl, php_mbstring, php_zip</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-8 col-12">
+                        <h2 style="color: #ebedfa">Install via composer</h2>
+                        <pre>
+                            <code class="bash" style="text-align: left;">composer global require "fxp/composer-asset-plugin:1.3.*"
+composer create-project phpffcms/ffcms ./path/to/document_root 3.1.0 --keep-vcs --prefer-dist
+composer update
+php console.php main:install</code>
+                        </pre>
+                        <small>or download <a href="#">ffcms.zip</a> standalone package.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- used packages and partners -->
+    <div class="my-5">
+        <div class="container text-center">
+            <a href="https://symfony.com/doc/current/components/http_foundation.html" target="_blank"><img src="images/vendors/symfony.png" alt="symfony logo" class="img-fluid"></a>
+            <a href="https://laravel.com/docs/5.6/eloquent" target="_blank"><img src="images/vendors/laravel.jpg" alt="laravel logo" class="img-fluid"></a>
+            <a href="https://getbootstrap.com/" target="_blank"><img src="images/vendors/bootstrap.jpg" alt="bootstrap logo" class="img-fluid"></a>
+        </div>
+    </div>
+
+    <!-- ffcms features -->
+    <div class="section light-bg" id="features">
+        <div class="container">
+            <div class="section-title">
+                <h3>Major features</h3>
+                <small>Why you should try ffcms?</small>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <i class="fa fa-bolt gradient-fill fa-4x mr-3"></i>
+                                <div class="media-body">
+                                    <h4 class="card-title">Performance</h4>
+                                    <p class="card-text">Low resource usage and high page speed generation. Highload friendly. Redis or memcached support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="fa fa-gears gradient-fill fa-4x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Customize</h4>
+                                    <p class="card-text">MVC arch and composer allow to extend or customize your website in easy way! Templates, apps, widgets</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="fa fa-language gradient-fill fa-4x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Internalization</h4>
+                                    <p class="card-text">Full-coverage internalization system based on custom i18n lib. Multi language "out of box"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section light-bg">
+        <div class="container">
+            <div class="section-title">
+                <small>FEATURES</small>
+                <h3>FFCMS default package</h3>
+            </div>
+
+            <ul class="nav nav-tabs nav-justified" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" data-toggle="tab" href="#system">System</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#apps">Apps</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="tab" href="#widgets">Widgets</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane fade show active" id="system">
+                    <div class="d-flex flex-column flex-lg-row">
+                        <img src="images/features-ico.png" alt="system features icon" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0 d-none d-sm-block" style="max-width: 250px;">
+                        <div>
+
+                            <h2>System features</h2>
+                            <ul>
+                                <li>Settings: system configuration in user friendly graphic interface or in native configuration files</li>
+                                <li>Files: manage your files over special commander</li>
+                                <li>Antivirus: check your system status, find and remove dangerous files or malware</li>
+                                <li>Routing: manage route URI map in graphic interface</li>
+                                <li>Update: keep refreshed and get new updates</li>
+                                <li>Apps & widgets: install new system extensions for your website</li>
+                                <li>Backup: keep safe and make system backup</li>
+                                <li>Store: find and install extension in 1 click from ffcms store</li>
+                                <li>Statistics: connect yandex.metrika api and monitor user statistics</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="apps">
+                    <div class="d-flex flex-column flex-lg-row">
+                        <div>
+                            <h2>Applications</h2>
+                            <ul>
+                                <li>Content: create, edit, delete content pages like static page, news, categories of news, etc</li>
+                                <li>User identity: complete user management system with registration, authentication and control</li>
+                                <li>User profile: extended user system with personal profile pages, wall, messages, etc</li>
+                                <li>Feedback: classic request-response system for user feedback</li>
+                                <li>Search: global website search system with live search features</li>
+                                <li>Sitemap: build full website sitemap for search engines and crawlers</li>
+                            </ul>
+                            <p>Besides this applications many custom apps can be installed in system using ffcms.store or composer packages.</p>
+                        </div>
+                        <img src="images/extension-ico.png" alt="extension icon" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0 d-none d-sm-block" style="max-width: 250px;">
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="widgets">
+                    <div class="d-flex flex-column flex-lg-row">
+                        <img src="images/widget-ico.png" alt="widget icon" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0d-none d-none d-sm-block" style="max-width: 250px;">
+                        <div>
+                            <h2>Widgets</h2>
+                            <ul>
+                                <li>Comments: complete comment system for whole website with manage ui</li>
+                                <li>Content tags: display and manage most popular tags from content system in widget</li>
+                                <li>New content: display and manage latest content items (news) from content app in widget</li>
+                                <li>Popular content: display and manage popular content from content app in widget</li>
+                                <li>New comments: display and manage latest user comments</li>
+                            </ul>
+                            <p>Besides this widget many custom widgets cann be installed from ffcms.store or composer packages. Usually, widgets not work like standalone packages, just use application data or features.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <img src="images/ffcms-admin-main.png" alt="ffcms admin" class="img-fluid">
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <div>
+                        <div class="box-icon"><i class="fa fa-check gradient-fill fa-3x"></i></div>
+                        <h2>Launch FFCMS website</h2>
+                        <p class="mb-4">There is 3 ways exist to launch your website on ffcms: composer, docker or legacy (standalone archive). Read more to get a complete information to choice your way!</p>
+                        <a href="#launch-way" class="btn btn-primary">Read more</a></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="section">
+        <div class="container">
+            <div class="section-title">
+                <small>Performance comparision</small>
+                <h3>FFCMS vs other CMS</h3>
+            </div>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th>CMS</th>
+                            <th>Version</th>
+                            <th>AVG load, sec</th>
+                            <th>Req/sec</th>
+                            <th>Memory, mb</th>
+                            <th>File size, mb</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>FFCMS</td>
+                            <td>3.1.0</td>
+                            <td>0.08</td>
+                            <td>4196</td>
+                            <td>3.4</td>
+                            <td>12.1</td>
+                        </tr>
+                        <tr>
+                            <td>Wordpress</td>
+                            <td>4.9.7</td>
+                            <td>0.123</td>
+                            <td>2134</td>
+                            <td>12.4</td>
+                            <td>32.1</td>
+                        </tr>
+                        <tr>
+                            <td>Bitrix</td>
+                            <td>12.1</td>
+                            <td>0.123</td>
+                            <td>2134</td>
+                            <td>12.4</td>
+                            <td>32.1</td>
+                        </tr>
+                        <tr>
+                            <td>Joomla</td>
+                            <td>4</td>
+                            <td>0.123</td>
+                            <td>2134</td>
+                            <td>12.4</td>
+                            <td>32.1</td>
+                        </tr>
+                        <tr>
+                            <td>ModX</td>
+                            <td>3</td>
+                            <td>0.123</td>
+                            <td>2134</td>
+                            <td>12.4</td>
+                            <td>32.1</td>
+                        </tr>
+                        <tr>
+                            <td>UMI.CMS</td>
+                            <td>3</td>
+                            <td>0.123</td>
+                            <td>2134</td>
+                            <td>12.4</td>
+                            <td>32.1</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
+
+    <div class="section light-bg" id="gallery">
+        <div class="container">
+            <div class="section-title">
+                <small>Some user and admin interface pics</small>
+                <h3>FFCMS screenshots</h3>
+            </div>
+
+            <div class="img-gallery owl-carousel owl-theme">
+                <a href="images/screens/screen1.png" target="_blank"><img src="images/screens/screen1_thumb.jpg" alt="main website ui"></a>
+                <a href="images/screens/screen2.png" target="_blank"><img src="images/screens/screen2_thumb.jpg" alt="main website ui"></a>
+                <a href="images/screens/screen3.png" target="_blank"><img src="images/screens/screen3_thumb.jpg" alt="main website ui"></a>
+                <a href="images/screens/screen4.png" target="_blank"><img src="images/screens/screen4_thumb.jpg" alt="main admin ui"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section light-bg" id="launch-way">
+        <div class="container">
+            <div class="text-center mb-5"><h2>Download & install</h2></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Composer</h3>
+                    <small class="text-secondary">* For production environment</small>
+                    <ul class="list-unstyled ui-steps">
+                        <li class="media">
+                            <div class="circle-icon mr-2">1</div>
+                            <div class="media-body">
+                                <h5>Install composer</h5>
+                                <p>Follow instruction in official composer website and install composer.</p>
+                                <p><a href="https://getcomposer.org/" target="_blank">getcomposer.org</a></p>
+                            </div>
+                        </li>
+                        <li class="media my-4">
+                            <div class="circle-icon mr-2">2</div>
+                            <div class="media-body">
+                                <h5>Install asset plugin</h5>
+                                <p>Composer asset plugin allow to resolve npm/bower dependency.</p>
+                                <p><code>composer global require "fxp/composer-asset-plugin:1.4.*"</code></p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="circle-icon mr-2">3</div>
+                            <div class="media-body">
+                                <h5>Initialize project</h5>
+                                <p>Create empty ffcms project from stable version via composer & github.</p>
+                                <code>composer create-project phpffcms/ffcms ./path/to/document_root 3.1.0 --keep-vcs
+                                    --prefer-dist</code>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="circle-icon mr-2">4</div>
+                            <div class="media-body">
+                                <h5>Complete installation</h5>
+                                <p>Run installation script from console or in browser page (uri: /install/).</p>
+                                <p><code>php console.php main:install</code></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h3>Docker</h3>
+                    <small class="text-secondary">* For developer environment</small>
+                    <ul class="list-unstyled ui-steps">
+                        <li class="media">
+                            <div class="circle-icon mr-2">1</div>
+                            <div class="media-body">
+                                <h5>Install docker</h5>
+                                <p>Follow instruction in official docker website and install docker.</p>
+                                <p><a href="https://www.docker.com/community-edition" target="_blank">docker.com</a></p>
+                            </div>
+                        </li>
+                        <li class="media my-4">
+                            <div class="circle-icon mr-2">2</div>
+                            <div class="media-body">
+                                <h5>Clone docker project</h5>
+                                <p>Clone docker git project from github.</p>
+                                <p><code>git clone https://github.com/phpffcms/docker-dev.git</code></p>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="circle-icon mr-2">3</div>
+                            <div class="media-body">
+                                <h5>Setup container</h5>
+                                <p>Create empty ffcms project from stable version via composer & github.</p>
+                                <code>docker-compose up -d</code>
+                            </div>
+                        </li>
+                        <li class="media">
+                            <div class="circle-icon mr-2">4</div>
+                            <div class="media-body">
+                                <h5>Change default settings</h5>
+                                <p>The default admin account is: </p>
+                                <pre><code lang="ini">login: admin
+password: admin</code>
+                                </pre>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3>Legacy way (archive)</h3>
+                    <p>The most legacy installation way (not recommended) - download complete .zip package, unpack it in <code>www</code> folder and run <code>/install/</code> uri in browser.</p>
+                    <a href="#" class="btn btn-primary">Download ffcms.zip</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section bg-gradient" id="news">
+        <div class="container">
+            <div class="section-title">
+                <h3>Project news</h3>
+                <small>There you can find a latest news & activity from our project! Keep watching!</small>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <h3>Dev news</h3>
+                    <ul>
+                        <li><a href="#">Test news title with some content #1</a></li>
+                        <li><a href="#">Test news title with some content #2</a></li>
+                        <li><a href="#">Test news title with some content #3</a></li>
+                        <li><a href="#">Test news title with some content #4</a></li>
+                        <li><a href="#">Test news title with some content #5</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-6">
+                    <h3>Github issues</h3>
+                    <ul>
+                        <li><a href="#">Test forum topic title with content #1</a></li>
+                        <li><a href="#">Test forum topic title with content #2</a></li>
+                        <li><a href="#">Test forum topic title with content #3</a></li>
+                        <li><a href="#">Test forum topic title with content #4</a></li>
+                        <li><a href="#">Test forum topic title with content #5</a></li>
+                    </ul>
+                </div>
+            </div>
+            <h2 class="mt-5">New extensions</h2>
+            <div class="img-gallery owl-carousel owl-theme">
+                <a href="images/ext_example.png" target="_blank"><img src="images/ext_example.png" alt="example"></a>
+                <a href="images/ext_example.png" target="_blank"><img src="images/ext_example.png" alt="example"></a>
+                <a href="images/ext_example.png" target="_blank"><img src="images/ext_example.png" alt="example"></a>
+                <a href="images/ext_example.png" target="_blank"><img src="images/ext_example.png" alt="example"></a>
+                <a href="images/ext_example.png" target="_blank"><img src="images/ext_example.png" alt="example"></a>
+                <a href="images/ext_example.png" target="_blank"><img src="images/ext_example.png" alt="example"></a>
+                <a href="images/ext_example.png" target="_blank"><img src="images/ext_example.png" alt="example"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="light-bg py-5" id="contact">
+        <div class="container">
+            <h2>Contact us</h2>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>Maintainer: Pyatinskiy Mihail</p>
+                    <p><span class="fa fa-envelope"></span> <a href="mailto:zenn1989@gmail.com">zenn1989@gmail.com</a></p>
+                    <p><span class="fa fa-telegram"></span> <a href="https://telegram.me/ffcms">@zenn1989</a></p>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="float-right">
+                                <a href="#" class="btn btn-primary">Feedback form</a>
+                                <a href="#" class="btn btn-primary">Report issue</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-icons pt-5">
+                        <a href="https://github.com/phpffcms" target="_blank"><span class="fa fa-github-alt"></span></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- // end .section -->
+    <footer class="my-5 text-center">
+        <!-- Copyright removal is not prohibited! -->
+        <p class="mb-2"><small>COPYRIGHT © 2018. FFCMS developer group.</small></p>
+
+        <small>
+            <a href="#" data-toggle="modal" data-target="#mitModal" class="m-2">LICENSE</a>
+            <a href="#" class="m-2">PRIVACY</a>
+        </small>
+    </footer>
+
+
+    <!-- MIT license modal -->
+    <div class="modal fade" id="mitModal" tabindex="-1" role="dialog" aria-labelledby="mitModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mitModalLabel">FFCMS License</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>The MIT License (MIT)</p>
+                    <p>Copyright (c) 2015-2018 FFCMS, Pyatinskiy Mihail</p>
+
+                    <p>Permission is hereby granted, free of charge, to any person obtaining a copy
+                    of this software and associated documentation files (the "Software"), to deal
+                    in the Software without restriction, including without limitation the rights
+                    to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                    copies of the Software, and to permit persons to whom the Software is
+                    furnished to do so, subject to the following conditions:</p>
+
+                    <p>The above copyright notice and this permission notice shall be included in all
+                        copies or substantial portions of the Software.</p>
+
+                    <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                    IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                    FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                    AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                    LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                    SOFTWARE.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="js/owl.carousel.min.js"></script>
+    <!-- highlight js -->
+    <script src="js/highlight.min.js"></script>
+    <!-- default js code -->
+    <script src="js/script.js"></script>
+
+    <script>hljs.initHighlightingOnLoad();</script>
 </body>
+
 </html>
