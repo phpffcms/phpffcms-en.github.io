@@ -54,7 +54,7 @@
     <header class="bg-gradient" id="about">
         <div class="container mt-5">
             <h1>FFCMS - Fast flexible system</h1>
-            <img src="images/fflogo.png" class="img-fluid" style="max-height: 450px;" />
+            <img src="images/fflogo.png" class="img-fluid" style="max-height: 450px;" alt="ffcms logo image"/>
             <p class="tagline">FFCMS - fast flexible content management system: php 7.1+, mysql/pgsql, redis caching. MVC and composer inside. <a href="#" data-toggle="modal" data-target="#mitModal">MIT</a> open-source license.</p>
         </div>
         <div class="mt-5 pb-5">
@@ -72,12 +72,11 @@
                     <div class="col-lg-8 col-12">
                         <h2 style="color: #ebedfa">Install via composer</h2>
                         <pre>
-                            <code class="bash" style="text-align: left;">composer global require "fxp/composer-asset-plugin:1.3.*"
-composer create-project phpffcms/ffcms ./path/to/document_root 3.1.0 --keep-vcs --prefer-dist
+                            <code class="bash" style="text-align: left;">composer create-project phpffcms/ffcms ./path/to/document_root 3.1 --keep-vcs --prefer-dist
 composer update
 php console.php main:install</code>
                         </pre>
-                        <small>or download <a href="#">ffcms.zip</a> standalone package.</small>
+                        <small>or download <a href="#" data-toggle="modal" data-target="#downloadModal">ffcms.zip</a> standalone package.</small>
                     </div>
                 </div>
             </div>
@@ -87,8 +86,9 @@ php console.php main:install</code>
     <!-- used packages and partners -->
     <div class="my-5">
         <div class="container text-center">
+            <a href="https://getcomposer.org/" target="_blank"><img src="images/vendors/composer.png" alt="composer logo" class="img-fluid"></a>
             <a href="https://symfony.com/doc/current/components/http_foundation.html" target="_blank"><img src="images/vendors/symfony.png" alt="symfony logo" class="img-fluid"></a>
-            <a href="https://laravel.com/docs/5.6/eloquent" target="_blank"><img src="images/vendors/laravel.jpg" alt="laravel logo" class="img-fluid"></a>
+            <a href="https://laravel.com/docs/5.7/eloquent" target="_blank"><img src="images/vendors/laravel.jpg" alt="laravel logo" class="img-fluid"></a>
             <a href="https://getbootstrap.com/" target="_blank"><img src="images/vendors/bootstrap.jpg" alt="bootstrap logo" class="img-fluid"></a>
         </div>
     </div>
@@ -142,6 +142,48 @@ php console.php main:install</code>
                     </div>
                 </div>
             </div>
+
+            <div class="row mt-2">
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <i class="fa fa-bar-chart gradient-fill fa-4x mr-3"></i>
+                                <div class="media-body">
+                                    <h4 class="card-title">SEO</h4>
+                                    <p class="card-text">FFCMS developed with support of major search engine optimization features out-of-box!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="fa fa-tablet gradient-fill fa-4x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Responsive</h4>
+                                    <p class="card-text">FFCMS based on bootstrap UI framework. Website interfaces are adaptive for any device resolutions!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4">
+                    <div class="card features">
+                        <div class="card-body">
+                            <div class="media">
+                                <span class="fa fa-shield gradient-fill fa-4x mr-3"></span>
+                                <div class="media-body">
+                                    <h4 class="card-title">Secure</h4>
+                                    <p class="card-text">There is no sql-injection, xss or csrf! There is eloquent ORM, form tokenizer and output escaping!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -177,7 +219,6 @@ php console.php main:install</code>
                                 <li>Routing: manage route URI map in graphic interface</li>
                                 <li>Update: keep refreshed and get new updates</li>
                                 <li>Apps & widgets: install new system extensions for your website</li>
-                                <li>Backup: keep safe and make system backup</li>
                                 <li>Store: find and install extension in 1 click from ffcms store</li>
                                 <li>Statistics: connect yandex.metrika api and monitor user statistics</li>
                             </ul>
@@ -196,7 +237,7 @@ php console.php main:install</code>
                                 <li>Search: global website search system with live search features</li>
                                 <li>Sitemap: build full website sitemap for search engines and crawlers</li>
                             </ul>
-                            <p>Besides this applications many custom apps can be installed in system using ffcms.store or composer packages.</p>
+                            <p>A lot of custom apps can be installed in ffcms env using ffcms.store or composer packages.</p>
                         </div>
                         <img src="images/extension-ico.png" alt="extension icon" class="img-fluid rounded align-self-start mr-lg-5 mb-5 mb-lg-0 d-none d-sm-block" style="max-width: 250px;">
                     </div>
@@ -213,7 +254,7 @@ php console.php main:install</code>
                                 <li>Popular content: display and manage popular content from content app in widget</li>
                                 <li>New comments: display and manage latest user comments</li>
                             </ul>
-                            <p>Besides this widget many custom widgets cann be installed from ffcms.store or composer packages. Usually, widgets not work like standalone packages, just use application data or features.</p>
+                            <p>Many custom widgets can be installed from ffcms.store or composer packages. Usually, widgets not work like standalone packages, just uses application data or features.</p>
                         </div>
                     </div>
                 </div>
@@ -345,29 +386,30 @@ php console.php main:install</code>
                                 <p><a href="https://getcomposer.org/" target="_blank">getcomposer.org</a></p>
                             </div>
                         </li>
-                        <li class="media my-4">
+                        <li class="media">
                             <div class="circle-icon mr-2">2</div>
                             <div class="media-body">
-                                <h5>Install asset plugin</h5>
-                                <p>Composer asset plugin allow to resolve npm/bower dependency.</p>
-                                <p><code>composer global require "fxp/composer-asset-plugin:1.4.*"</code></p>
+                                <h5>Initialize project</h5>
+                                <p>Create empty ffcms project from stable version via composer & github.</p>
+                                <code>composer create-project phpffcms/ffcms ./path/to/document_root 3.1.0 --keep-vcs --prefer-dist</code>
                             </div>
                         </li>
                         <li class="media">
                             <div class="circle-icon mr-2">3</div>
                             <div class="media-body">
-                                <h5>Initialize project</h5>
-                                <p>Create empty ffcms project from stable version via composer & github.</p>
-                                <code>composer create-project phpffcms/ffcms ./path/to/document_root 3.1.0 --keep-vcs
-                                    --prefer-dist</code>
+                                <h5>Complete installation</h5>
+                                <p>Install ffcms in web UI:</p>
+                                <p><code>http://yourwebsite/install</code></p>
+                                <p>or run console install script:</p>
+                                <p><code>php console.php main:install</code></p>
+
                             </div>
                         </li>
                         <li class="media">
                             <div class="circle-icon mr-2">4</div>
                             <div class="media-body">
-                                <h5>Complete installation</h5>
-                                <p>Run installation script from console or in browser page (uri: /install/).</p>
-                                <p><code>php console.php main:install</code></p>
+                                <h5>Enjoy!</h5>
+                                <p>All done, good job!</p>
                             </div>
                         </li>
                     </ul>
@@ -417,7 +459,7 @@ password: admin</code>
                 <div class="col-md-12">
                     <h3>Legacy way (archive)</h3>
                     <p>The most legacy installation way (not recommended) - download complete .zip package, unpack it in <code>www</code> folder and run <code>/install/</code> uri in browser.</p>
-                    <a href="#" class="btn btn-primary">Download ffcms.zip</a>
+                    <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#downloadModal">Download ffcms.zip</a>
                 </div>
             </div>
         </div>
@@ -470,7 +512,7 @@ password: admin</code>
             <div class="row">
                 <div class="col-lg-6">
                     <p>Maintainer: Pyatinskiy Mihail</p>
-                    <p><span class="fa fa-envelope"></span> <a href="mailto:zenn1989@gmail.com">zenn1989@gmail.com</a></p>
+                    <p><span class="fa fa-envelope"></span> <a href="mailto:zenn@ffcms.org">zenn@ffcms.org</a></p>
                     <p><span class="fa fa-telegram"></span> <a href="https://telegram.me/ffcms">@zenn1989</a></p>
                 </div>
                 <div class="col-lg-6">
@@ -478,7 +520,7 @@ password: admin</code>
                         <div class="col-12">
                             <div class="float-right">
                                 <a href="#" class="btn btn-primary">Feedback form</a>
-                                <a href="#" class="btn btn-primary">Report issue</a>
+                                <a href="https://github.com/phpffcms/ffcms/issues" target="_blank" class="btn btn-primary">Report issue</a>
                             </div>
                         </div>
                     </div>
@@ -495,13 +537,12 @@ password: admin</code>
 
 
     <!-- // end .section -->
+
     <footer class="my-5 text-center">
-        <!-- Copyright removal is not prohibited! -->
-        <p class="mb-2"><small>COPYRIGHT © 2018. FFCMS developer group.</small></p>
+        <p class="mb-2"><small>COPYRIGHT © 2014-2019. FFCMS developer group.</small></p>
 
         <small>
             <a href="#" data-toggle="modal" data-target="#mitModal" class="m-2">LICENSE</a>
-            <a href="#" class="m-2">PRIVACY</a>
         </small>
     </footer>
 
@@ -537,6 +578,25 @@ password: admin</code>
                     LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
                     OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
                     SOFTWARE.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Archive download modal -->
+    <div class="modal fade" id="downloadModal" tabindex="-1" role="dialog" aria-labelledby="downloadModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="downloadModalLabel">Download FFCMS standalone</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Usage of standalone .zip archive is deprecated way for now. We are strongly recommend you to use composer or docker.</p>
+                    <p>But any way if you want to continue use standalone version - download zip archive and use manual installation guide.</p>
+                    <a href="#" class="btn btn-danger">Download ffcms.zip</a>
                 </div>
             </div>
         </div>
