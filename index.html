@@ -74,7 +74,7 @@
                         <h2 style="color: #ebedfa">Install via composer</h2>
                         <pre>
                             <code class="bash" style="text-align: left;">composer create-project phpffcms/ffcms ./path/to/document_root 3.1 --keep-vcs --prefer-dist
-composer update
+composer update --optimize-autoloader
 php console.php main:install</code>
                         </pre>
                         <small>or download <a href="#" data-toggle="modal" data-target="#downloadModal">ffcms.zip</a> standalone package.</small>
@@ -296,7 +296,6 @@ php console.php main:install</code>
                             <th>Version</th>
                             <th>AVG load, sec</th>
                             <th>Req/sec</th>
-                            <th>Memory, mb</th>
                             <th>File size, mb</th>
                         </tr>
                         </thead>
@@ -304,23 +303,20 @@ php console.php main:install</code>
                         <tr>
                             <td>FFCMS</td>
                             <td>3.1.0</td>
-                            <td>?</td>
-                            <td>?</td>
-                            <td>?</td>
+                            <td>0.031</td>
+                            <td>29.8</td>
                             <td>?</td>
                         </tr>
                         <tr>
                             <td>Wordpress</td>
-                            <td>4.9.7</td>
-                            <td>?</td>
-                            <td>?</td>
-                            <td>?</td>
+                            <td>5.0.3</td>
+                            <td>0.016</td>
+                            <td>53</td>
                             <td>?</td>
                         </tr>
                         <tr>
-                            <td>Bitrix</td>
-                            <td>12.1</td>
-                            <td>?</td>
+                            <td>Bitrix standard</td>
+                            <td>18.1.5</td>
                             <td>?</td>
                             <td>?</td>
                             <td>?</td>
@@ -331,7 +327,6 @@ php console.php main:install</code>
                             <td>?</td>
                             <td>?</td>
                             <td>?</td>
-                            <td>?</td>
                         </tr>
                         <tr>
                             <td>ModX</td>
@@ -339,12 +334,10 @@ php console.php main:install</code>
                             <td>?</td>
                             <td>?</td>
                             <td>?</td>
-                            <td>?</td>
                         </tr>
                         <tr>
                             <td>UMI.CMS</td>
                             <td>3</td>
-                            <td>?</td>
                             <td>?</td>
                             <td>?</td>
                             <td>?</td>
